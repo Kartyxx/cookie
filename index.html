@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Cookie Clicker</h1>
+        <p>Cookies : <span id="cookieCount">0</span></p>
+        <button id="cookieButton">
+            🍪 Clique-moi !
+        </button>
+        
+        <button id="upgradeButton">Amélioration (10 cookies)</button>
+
+        <div id="cookieFactory">
+            <h3>Usine à Cookies</h3>
+            <div>Automatise la production de cookies :</div>
+            <button class="upgrade" id="buyUpgrade1">1 cookie toutes les 5s - 10 cookies</button>
+            <button class="upgrade" id="buyUpgrade2">1 cookie toutes les 1s - 50 cookies</button>
+            <button class="upgrade" id="buyUpgrade3">2 cookie toutes les 1s - 100 cookies</button>
+        </div>
+
+        <audio id="cookieClickSound" src="assets/sons/cookierEat.mp3" preload="auto"></audio>
+    </div>
+
+    <div id="backgroundChanger">
+        <h3>Changez le fond</h3>
+        <p>Coût : 10 cookies par couleur</p>
+        <div id="colorOptions">
+            <div class="color-square" style="background-color: red;" data-color="blue" data-price="10"></div>
+            <div class="color-square" style="background-color: blue;" data-color="green" data-price="10"></div>
+            <div class="color-square" style="background-color: green;" data-color="orange" data-price="10"></div>
+            <div class="color-square" style="background-color: yellow;" data-color="green" data-price="10"></div>
+            <div class="color-square" style="background-color: purple;" data-color="blue" data-price="10"></div>
+            <div class="color-square" style="background-color: orange;" data-color="purple" data-price="10"></div>
+        </div>
+    </div>
+
+    <button id="deleteAlertButton">Supprimer les alertes (50 cookies)</button>
+    <button id="buyCutSound">Acheter l'amélioration CutSound (50 cookies)</button>
+
+    <div id="soundControl" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center; display: none;">
+        <label for="volumeSlider" style="color: white;">Volume :</label>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" />
+        <span id="volumeValue" style="color: white; font-weight: bold;">100%</span>
+    </div>
+
+    <div id="finalButtonContainer">
+        <button id="finalButton" disabled>🎉 Terminer le jeu - 1000 cookies</button>
+    </div>
+    <div id="endGameOverlay" style="display: none;">
+        <img id="finalCookieImage" src="assets/images/final-cookie.png" alt="Cookie Final">
+        <h2>Félicitations, vous avez gagné !</h2>
+    </div>
+    
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

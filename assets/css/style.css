@@ -1,0 +1,154 @@
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#app {
+  margin-top: 50px;
+}
+
+#cookieCount {
+  font-size: 2em;
+  margin: 20px;
+}
+
+#cookieButton {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+}
+
+.upgrade-container {
+  margin-top: 30px;
+}
+
+.upgrade {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.upgrade:disabled {
+  background-color: #ccc;
+}
+
+#cookieFactory {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  text-align: left;
+}
+
+#cookieFactory h3 {
+  margin-bottom: 20px;
+}
+
+
+#backgroundChanger {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+#colorOptions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-square {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid #000;
+  transition: transform 0.2s;
+}
+
+.color-square:hover {
+  transform: scale(1.1);
+}
+
+
+#soundControl {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px red, 0 0 15px yellow, 0 0 20px green;
+  transform: rotate(15deg);
+}
+#soundControl {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px red, 0 0 15px yellow, 0 0 20px green;
+  transform: rotate(15deg);
+}
+
+#volumeSlider {
+  width: 250px;
+  height: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, red, yellow, green, blue);
+  transition: transform 0.5s ease;
+}
+
+#volumeValue {
+  margin-top: 10px;
+  display: inline-block;
+  text-shadow: 1px 1px 3px black;
+  font-size: 18px;
+}
+
+#volumeSlider:hover {
+  transform: scale(1.1);
+}
+
+#endGameOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#finalCookieImage {
+    max-width: 300px;
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#endGameOverlay h2 {
+    color: white;
+    margin-top: 20px;
+    font-size: 2em;
+}
